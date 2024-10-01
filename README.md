@@ -31,7 +31,7 @@ The Meal Matrix application is a dynamic visual interface designed for exploring
 
   ```bash
    git clone https://github.com/your-username/MealMatrix.git
-   cd PostPulse
+   cd food-explorer
   ```
 2 **Install Dependencies ( Client ):**
 
