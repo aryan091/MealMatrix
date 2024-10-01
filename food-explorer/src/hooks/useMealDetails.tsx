@@ -6,6 +6,10 @@ interface MealDetails {
   instructions: string;
   ingredients: { name: string; measure: string }[]; // Update the ingredients type
   tags: string[];
+  thumbnail: string;
+  youtube: string;
+  source: string;
+  area: string;
 }
 
 const useMealDetails = (mealId: string | null) => {
@@ -46,7 +50,7 @@ const useMealDetails = (mealId: string | null) => {
         } else {
           throw new Error('Meal not found');
         }
-      } catch (error) {
+      } catch (error: any) {
         setErrorMessage(error.message);
       } finally {
         setMealLoading(false);

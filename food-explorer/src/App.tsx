@@ -11,6 +11,7 @@ import ReactFlow, {
   applyEdgeChanges,
   SmoothStepEdge,
   MarkerType,
+  BackgroundVariant
 } from "reactflow";
 import "reactflow/dist/style.css";
 
@@ -69,11 +70,10 @@ const App: React.FC = () => {
   const { ingredientMeals, ingredientMealLoading } =
     useMealsByIngredient(selectedIngredient);
 
-  function extractNumber(str) {
-    const match = str.match(/-(\d{5})-/);
-    return match ? match[1] : null;
-  }
-
+    function extractNumber(str: string): string | null {
+      const match = str.match(/-(\d{5})-/);
+      return match ? match[1] : null;
+    }
   const onConnect = useCallback(
     (params: Connection) => setEdges((eds) => addEdge(params, eds)),
     [setEdges]
@@ -90,6 +90,7 @@ const App: React.FC = () => {
   );
   const onNodeClick = useCallback(
     (event: React.MouseEvent, node: Node) => {
+      console.log("Node clicked:", event);
       const isExpanded = expandedNodes.includes(node.id);
       const parentPosition = node.position;
 
@@ -301,7 +302,7 @@ const categoryNodes = topCategories.map((category, index) => {
           };
         });
         
-        const optionEdges = optionNodes.map((optionNode, index) => ({
+        const optionEdges = optionNodes.map((optionNode) => ({
           id: `edge-${node.id}-${optionNode.id}`,
           source: node.id,
           target: `${optionNode.id}`,
@@ -323,7 +324,6 @@ const categoryNodes = topCategories.map((category, index) => {
         node.id.startsWith("view-ingredients")
       ) {
         console.log("Node ID in option view ingredients:", node.id);
-        const mealId = node.id.split("-")[2];
 
         if (mealDetails && !mealLoading) {
           const ingredients = mealDetails.ingredients || [];
@@ -465,7 +465,7 @@ const tagNodes = topTagNodes.map((tag, index) => {
           edgeTypes={edgeTypes}
           fitView
         >
-          <Background variant="lines" />
+          <Background variant={BackgroundVariant.Lines} />
           <Controls />
           <MiniMap />
         </ReactFlow>
