@@ -13,7 +13,7 @@ const IngredientNode: React.FC<{ data: { label: string } }> = ({ data }) => {
         {/* Box around the image */}
         <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-200 rounded-md flex items-center justify-center">
           <img
-            src={`https://www.themealdb.com/images/ingredients/${data.label}-Small.png`} // Using template literals
+            src={`${import.meta.env.VITE_MEALDB_IMAGE_URL}${data.label}-Small.png`}
             alt={data.label}
             className="w-6 h-6 sm:w-8 sm:h-8 rounded-full"
           />

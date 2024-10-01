@@ -23,7 +23,7 @@ export const useMeals = (category: string) => {
       setError(null);
 
       try {
-        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
+        const response = await fetch(`${import.meta.env.VITE_MEALDB_MEALS}filter.php?c=${category}`);
         const data = await response.json();
 
         if (data.meals) {

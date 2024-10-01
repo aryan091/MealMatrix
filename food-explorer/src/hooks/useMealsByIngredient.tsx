@@ -16,7 +16,7 @@ const useMealsByIngredient = (ingredient: string | null) => {
       setError(null);
       
       try {
-        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`);
+        const response = await fetch(`${import.meta.env.VITE_MEALDB_BYINGREDIENT}filter.php?i=${ingredient}`);
         const data = await response.json();
         
         // Check if meals exist in the response

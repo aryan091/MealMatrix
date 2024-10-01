@@ -19,7 +19,7 @@ export const useCategories = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php');
+        const response = await fetch(`${import.meta.env.VITE_MEALDB_CATERORIES}`);
         const data = await response.json();
 
         if (data.categories) {

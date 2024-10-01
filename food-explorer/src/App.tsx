@@ -396,6 +396,10 @@ const tagNodes = topTagNodes.map((tag, index) => {
           id: `edge-${node.id}-${tagNode.id}`,
           source: node.id,
           target: tagNode.id,
+          markerEnd: {
+            type: MarkerType.ArrowClosed,
+            color: 'black',
+          }
         }));
 
         setNodes((nds) => [...nds, ...tagNodes]);

@@ -22,7 +22,7 @@ const useMealDetails = (mealId: string | null) => {
 
     const fetchMealDetails = async () => {
       try {
-        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
+        const response = await fetch(`${import.meta.env.VITE_MEALDB_DETAILS}lookup.php?i=${mealId}`);
         const data = await response.json();
 
         if (data.meals && data.meals.length > 0) {
