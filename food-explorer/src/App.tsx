@@ -455,7 +455,7 @@ const tagNodes = topTagNodes.map((tag, index) => {
   return (
     <div className="h-screen flex">
       <Header/>
-      <div className="flex-grow z-0">
+      <div className="flex-grow z-0 ">
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -465,7 +465,7 @@ const tagNodes = topTagNodes.map((tag, index) => {
           onNodeClick={onNodeClick}
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
-          fitView
+          fitView 
         >
           <Background variant={BackgroundVariant.Lines} />
           <Controls />
