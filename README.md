@@ -36,7 +36,7 @@ The Meal Matrix application is a dynamic visual interface designed for exploring
 2 **Install Dependencies ( Client ):**
 
   ```bash
-  cd client
+  cd food-explorer
   npm install
   ```
 
