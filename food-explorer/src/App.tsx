@@ -15,14 +15,15 @@ import ReactFlow, {
 } from "reactflow";
 import "reactflow/dist/style.css";
 
-import StartNode from "./StartNode";
-import CategoryNode from "./CategoryNode";
-import MealNode from "./MealNode";
-import IngredientNode from "./IngredientNode";
-import OptionNode from "./OptionNode";
-import MealOptionNode from "./MealOptionNode";
-import DetailsSidebar from "./DetailsSidebar";
-import TagNode from "./TagNode";
+import StartNode from "./components/StartNode";
+import CategoryNode from "./components/CategoryNode";
+import MealNode from "./components/MealNode";
+import IngredientNode from "./components/IngredientNode";
+import OptionNode from "./components/OptionNode";
+import MealOptionNode from "./components/MealOptionNode";
+import DetailsSidebar from "./components/DetailsSidebar";
+import TagNode from "./components/TagNode";
+import Header from "./components/Header";
 import { useCategories } from "./hooks/useCategories";
 import { useMeals } from "./hooks/useMeals";
 import useMealDetails from "./hooks/useMealDetails";
@@ -453,7 +454,8 @@ const tagNodes = topTagNodes.map((tag, index) => {
 
   return (
     <div className="h-screen flex">
-      <div className="flex-grow">
+      <Header/>
+      <div className="flex-grow z-0">
         <ReactFlow
           nodes={nodes}
           edges={edges}

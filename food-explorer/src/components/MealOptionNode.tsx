@@ -4,7 +4,7 @@ import { TiArrowForwardOutline } from "react-icons/ti";
 
 const MealOptionNode: React.FC<{ data: { label: string } }> = ({ data }) => {
   return (
-    <div className='px-4 py-1  shadow-md rounded-full bg-gray-100 border-2 border-gray-300'>
+    <div className='px-4 py-1  shadow-lg rounded-full bg-pink-200 border-2 border-gray-300'>
     <Handle type="target" position={Position.Left} className='opacity-0' />
     <div className='flex gap-2'>
     <TiArrowForwardOutline size={20} color="green" />

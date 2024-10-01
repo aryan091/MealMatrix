@@ -24,10 +24,8 @@ interface DetailsSidebarProps {
 const DetailsSidebar: React.FC<DetailsSidebarProps> = ({ meal , setShowSidebar}) => {
   if (!meal) return null;
 
-  // Split instructions by paragraphs (considering '\r\n' or '\n' for line breaks)
   const instructionParagraphs = meal.instructions.split(/\r?\n/);
 
-  // Define a set of colors for the tags
   const tagColors = [
     "bg-purple-200 text-purple-800",
     "bg-yellow-200 text-yellow-800",
@@ -38,7 +36,7 @@ const DetailsSidebar: React.FC<DetailsSidebarProps> = ({ meal , setShowSidebar})
   ];
 
   return (
-    <div className="w-full md:w-1/3 bg-white shadow-lg rounded-lg p-4 overflow-y-auto">
+    <div className="w-full md:w-1/3 bg-white shadow-lg rounded-lg p-4 overflow-y-auto z-30">
 
 <div className="flex items-center justify-between ">
   {/* Meal name */}

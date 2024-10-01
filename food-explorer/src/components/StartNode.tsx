@@ -4,7 +4,7 @@ import { CiGlobe } from "react-icons/ci";
 
 const StartNode: React.FC<{ data: { label: string } }> = ({ data }) => {
   return (
-    <div className="pr-4 pl-2 py-2 shadow-md rounded-md bg-white border-2 border-gray-300 flex items-center space-x-3 h-auto w-44">
+    <div className="pr-4 pl-2 py-2 shadow-lg rounded-md bg-green-200 border-2 border-gray-300 flex items-center space-x-3 h-auto w-44">
       {/* Handle for node connection */}
 
       {/* Icon in a box */}
