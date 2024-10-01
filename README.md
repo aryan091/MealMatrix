@@ -40,7 +40,22 @@ The Meal Matrix application is a dynamic visual interface designed for exploring
   npm install
   ```
 
-3 **Run the Application ( Client ):**
+3 **Set up environment variables:**
+   Create a `.env` file in the root directory and add the following:
+
+   ```bash
+VITE_MEALDB_IMAGE_URL=https://www.themealdb.com/images/ingredients/
+
+VITE_MEALDB_CATEGORIES=https://www.themealdb.com/api/json/v1/1/categories.php
+
+VITE_MEALDB_DETAILS=https://www.themealdb.com/api/json/v1/1/
+
+VITE_MEALDB_MEALS=https://www.themealdb.com/api/json/v1/1/
+
+VITE_MEALDB_BYINGREDIENT=https://www.themealdb.com/api/json/v1/1/
+  ```
+
+4 **Run the Application ( Client ):**
 
   Be sure you are in  `food-explorer` directory
 
