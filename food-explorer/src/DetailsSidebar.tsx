@@ -16,9 +16,10 @@ interface MealDetails {
 }
 
 interface DetailsSidebarProps {
-  meal: MealDetails;
+  meal: MealDetails | null; // Allow meal to be null
   setShowSidebar: (showSidebar: boolean) => void;
 }
+
 
 const DetailsSidebar: React.FC<DetailsSidebarProps> = ({ meal , setShowSidebar}) => {
   if (!meal) return null;

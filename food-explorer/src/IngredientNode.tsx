@@ -1,7 +1,7 @@
 import React from 'react';
 import { Handle, Position } from 'reactflow';
 
-const IngredientNode: React.FC<{ data: { label: string, thumbnail: string } }> = ({ data }) => {
+const IngredientNode: React.FC<{ data: { label: string } }> = ({ data }) => {
   console.log("Data in IngredientNode", data);
 
   return (

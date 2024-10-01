@@ -80,12 +80,12 @@ const App: React.FC = () => {
   );
 
   const onNodesChange = useCallback(
-    (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
+    (changes: any) => setNodes((nds) => applyNodeChanges(changes, nds)),
     []
   );
 
   const onEdgesChange = useCallback(
-    (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
+    (changes: any) => setEdges((eds) => applyEdgeChanges(changes, eds)),
     []
   );
   const onNodeClick = useCallback(
@@ -341,7 +341,7 @@ const ingredientNodes = topIngredientNodes.map((ingredient, index) => {
   return {
     id: `ingredient-${ingredient.name}-${nodeCounter}`,
     type: "ingredient",
-    data: { label: `${ingredient.name}`, thumbnail: ingredient.thumbnail },
+    data: { label: `${ingredient.name}` },
     position: {
       x: node.position.x + 400, // Keep the x position fixed as per your original logic
       y: node.position.y + yOffset + (isAbove ? -nodeOffsetY * halfIngredientLength : 0), // Adjust for the first half
@@ -470,7 +470,10 @@ const tagNodes = topTagNodes.map((tag, index) => {
           <MiniMap />
         </ReactFlow>
       </div>
-      {showSidebar && selectedMeal && <DetailsSidebar meal={mealDetails} setShowSidebar={setShowSidebar} />}
+      {showSidebar && selectedMeal && mealDetails && (
+  <DetailsSidebar meal={mealDetails} setShowSidebar={setShowSidebar} />
+)}
+
     </div>
   );
 };
