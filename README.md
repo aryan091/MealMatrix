@@ -55,7 +55,7 @@ VITE_MEALDB_MEALS=https://www.themealdb.com/api/json/v1/1/
 VITE_MEALDB_BYINGREDIENT=https://www.themealdb.com/api/json/v1/1/
   ```
 
-4 **Run the Application ( Client ):**
+4 **Run the Application:**
 
   Be sure you are in  `food-explorer` directory
 
