@@ -110,7 +110,7 @@ const DetailsSidebar: React.FC<DetailsSidebarProps> = ({ meal , setShowSidebar})
       {/* Instructions */}
 <h3 className="text-xl font-semibold mb-2">Instructions</h3>
 <div className="border rounded-lg p-4 bg-gray-50 shadow-sm mb-4">
-  <ul className="list-none space-y-2 ">
+  <ul className="list-none space-y-4 ">
     {instructionParagraphs.map((para, index) => (
       <li key={index} className="text-justify">{para}</li> 
     ))}
